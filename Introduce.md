@@ -1,11 +1,10 @@
-# Read
+Deploy introduce:
 
-Deploy
-----------------------------------------------------------------------------------------------------------------------------------------------------------
 Deploy coin is designed on DogeCoin fork (DRC20). We created a special schema on deploy coin which will be the utility part for Deploy is Decentralized tx Transaction part of POW (proof-of-work) and peer-to-peer cryptocurrency. The development of the Deploy coin utility will certainly be carried out in the future as the cryptocurrency technology itself develops and follows the needs of its users.
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 Dogecoin
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Introduction:
 In the world of cryptocurrencies, where cutting-edge technology and financial innovation often take center stage, one digital currency stands out with its quirky origins and lighthearted nature. Dogecoin, born out of an internet meme featuring a Shiba Inu dog, has captured the attention of millions, gaining popularity and becoming a symbol of community, generosity, and the power of online communities. What started as a joke currency has now become a significant player in the crypto market. In this article, we will delve into the fascinating story behind Dogecoin and explore its rise to prominence.
 
@@ -26,3 +25,121 @@ Furthermore, the ongoing development and improvements within the Dogecoin ecosys
 
 Conclusion:
 Dogecoin's journey from an internet meme to a prominent cryptocurrency is a testament to the power of online communities and the ever-evolving nature of the digital landscape. It has shown that cryptocurrencies can be about more than just financial gains, promoting the values of generosity, community, and lightheartedness. While its future remains uncertain, Dogecoin's impact on the crypto industry serves as a reminder that innovation can come from the most unexpected places, and even a meme can inspire a phenomenon.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+DRC20 
+
+ComparisonDRC-20 and BRC-20 :
+Gas Fees :
+- DRC-20 (Doge): Offers fast transaction speeds with low fees.
+-	BRC-20 (BTC): Often experiences congestion and high fees.
+
+
+Consensus :
+-	DRC-20 (Dogecoin): Benefits from having one of the largest communities outside of BTC/ETH. It also possesses the natural advantage of meme properties, which have the potential to go viral.
+-	BRC-20 (Bitcoin): Relies heavily on Bitcoin whales and has fewer new users actively participating in the community.
+Decentralization :
+-	DRC-20: Achieves 100% decentralization.
+-	The inscription ledger of DRC-20 tokens is stored on the ETHF chain.
+-	BRC-20: Relies on centralized wallet-based storage.
+-	The inscription ledger of BRC-20 tokens is centrally stored within wallets.
+
+Limitations and Conditions :
+-	DRC-20: Allows the use of three or four characters for token names, eliminates the risk of double-spending, and offers flexible transaction capabilities.
+-	BRC-20: Limits token names to only four characters, does not support upgrades, involves double-spending risk, and does not allow for transaction cancellations.
+These differences highlight the contrasting features and characteristics between DRC-20 and BRC-20 tokens.
+DRC-20 inscriptions will only exist on the PoW chain, achieving multi-chain storage and maintaining decentralization.
+
+• DRC20 is a token standard for the Dfinity blockchain.  It was created by an anonymous developer in May 2023 and is designed to be faster and cheaper than the previous standard, BRC20.
+
+DRC20 tokens are created using a process called minting.  Minting requires a user to have a certain amount of Dogecoin in their wallet.  Once a user has minted a DRC20 token, they can then transfer it to another user or use it to purchase goods or services.
+DRC20 tokens are secured by the Dogecoin blockchain.  The Dogecoin blockchain is a decentralized network of computers that verify and record transactions.  
+This makes DRC20 tokens very secure
+Here are some of the key features of DRC-20 tokens:
+-	Faster: DRC-20 transactions are processed much faster than BRC-20 transactions.  This is because DRC-20 uses a different consensus mechanism than BRC-20.
+-	Cheaper: DRC-20 transactions are also much cheaper than BRC-20 transactions.  This is because DRC-20 uses a different fee structure than BRC-20.
+-	Easier to use: DRC-20 tokens are easier to use than BRC-20 tokens.  This is because DRC-20 tokens are compatible with more wallets and exchanges than BRC-20 tokens.
+-	DRC-20 tokens are a new and innovative way to use the Dogecoin blockchain.  They offer a number of advantages over other types of tokens, such as speed, cost, and ease of use. DRC-20 tokens are still in their early stages of development, but they have the potential to revolutionize the way we use the Dogecoin blockchain.
+
+Here are some of the benefits of using DRC-20 tokens :
+-	Speed: DRC-20 transactions are processed much faster than BRC-20 transactions.  This is because DRC-20 uses a different consensus mechanism than BRC-20.
+-	Cost: DRC-20 transactions are also much cheaper than BRC-20 transactions.  This is because DRC-20 uses a different fee structure than BRC-20.
+-	Ease of use: DRC-20 tokens are easier to use than BRC-20 tokens.
+Source : Unielon and anonymous
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DRC-20
+Cardinal theory can facilitate fungibility on dogecoin
+Create a drc-20 with the deploy function
+Mint an amount of drc-20's with the mint function
+Transfer an amount of drc-20's with the transfer function. 
+
+Mint drc-20
+Inscribe the mint function to your cardinal compatible wallet. Make sure the ticker matches either a) the drc-20 you deployed in step 1, or b) any drc-20 that has yet to reach its fully diluted supply. Also if the drc-20 has a mint limit, make sure not to surpass this.
+It's a example of mint script as following:
+
+{ 
+  "p": "drc-20",
+  "op": "mint",
+  "tick": "dply",
+  "amt": "100"
+}
+
+command parameter description
+Key	Require	Description
+p	yes	Protocol: Helps other systems identify and process drc-20 events
+op	yes	Operation: Type of event (Deploy, Mint, Transfer)
+tick	yes	Ticker: letter identifier of the drc-20, equal to 3 or 4 characters
+amt	yes	Amount to mint: States the amount of the drc-20 to mint. Has to be less than "lim" above if stated
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Transfer drc-20
+Inscribe the transfer function to your ordinal compatible wallet. Make sure the transfer function inscription information is valid before inscribing
+It's a example of transfer script as following:
+
+{ 
+  "p": "drc-20",
+  "op": "transfer",
+  "tick": "dply",
+  "amt": "100"
+}
+
+command parameter description
+Key	Require	Description
+p	yes	Protocol: Helps other systems identify and process drc-20 events
+op	yes	Operation: Type of event (Deploy, Mint, Transfer)
+tick	yes	Ticker: letter identifier of the drc-20, equal to 3 or 4 characters
+amt	yes	Amount to transfer: States the amount of the drc-20 to transfer.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Deploy drc-20
+Inscribe the deploy function to you ordinal compatible wallet with the desired drc-20 set. It's a example of deploy script as following:
+{ 
+  "p": "drc-20",
+  "op": "deploy",
+  "tick": "Dply",
+  "max": "100000",
+  "lim": "1000"
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+command parameter description
+
+Key	Require	Description
+p	yes	Protocol: Helps other systems identify and process drc-20 events
+op	yes	Operation: Type of event (Deploy, Mint, Transfer)
+tick	yes	Ticker: letter identifier of the drc-20, equal to 3 or 4 characters
+max	yes	Max supply: set max supply of the drc-20
+lim	no	Mint limit: If letting users mint to themsleves, limit per cardinal
+dec	no	Decimals: set decimal precision, default to 18
+burn	no	burn some token
+func	no	specific rules such as mining rules, rewards rules ...
+
+
+
+
+
